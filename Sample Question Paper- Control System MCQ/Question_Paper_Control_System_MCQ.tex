@@ -1,0 +1,239 @@
+\documentclass[a4paper]{exam}
+\usepackage[utf8]{inputenc}\usepackage{amsthm}\usepackage{bm}
+\usepackage{enumitem}
+\usepackage{amsmath}\usepackage{amssymb}
+\usepackage{tikz}
+%\printanswers %Comment this line to print only questions
+\author{}
+\pdfinfo{
+   /Author (Arunima Prasad JS)
+   /CreationDate (D:2022010100000)
+   /Keywords (CS, GECBH, ECE)
+}
+\usepackage[pdftex,
+            pdftitle={Control System Questions},
+            pdfsubject={Control System},
+            pdfproducer={Not a Robot},
+            pdfcreator={GEC Barton Hill, TVM}]{hyperref}
+\usepackage{hyperxmp}
+\usepackage{graphicx}
+\title{\underline{\textbf{Control System Questions}}\\Multiple Choice Questions (MCQ)  \\  }
+\begin{document}
+
+\maketitle
+
+\begin{questions}
+\question
+The term ‘reset control’ refers to:
+\begin{enumerate}[label=(\Alph*)]
+\item Integral control
+\item Derivative control
+\item Proportional control
+\item None of the above
+\end{enumerate}
+\begin{solution}
+(A)
+\end{solution}
+
+\question
+The transfer function $\displaystyle\frac{1+0.5s}{1+s}$ represent a:
+\begin{enumerate}[label=(\Alph*)]
+\item Lag network
+\item Lead network
+\item Lag–lead network
+\item Proportional controller
+\end{enumerate}
+\begin{solution}
+(A)
+\end{solution}
+
+\question
+While designing controller, the advantage of pole–zero cancellation is:
+\begin{enumerate}[label=(\Alph*)]
+\item The system order is increased
+\item The system order is reduced
+\item The cost of controller becomes low
+\item System’s error reduced to optimum levels
+\end{enumerate}
+\begin{solution}
+(B)
+\end{solution}
+
+\question
+A proportional controller leads to:
+\begin{enumerate}[label=(\Alph*)]
+\item infinite error for step input for type 1 system
+\item finite error for step input for type 1 system
+\item zero steady state error for step input for type 1 system
+\item zero steady state error for step input for type 0 system
+\end{enumerate}
+\begin{solution}
+(C)
+\end{solution}
+
+\question
+The state-space representation of a system is given
+by:\\
+$
+\boldsymbol{\dot{x}}=
+\begin{bmatrix}
+-1 & 0\\
+0 & -2
+\end{bmatrix} 
+x(t)+
+\begin{bmatrix}
+1 \\
+1 
+\end{bmatrix}
+u(t), y(t) = 
+\begin{bmatrix}
+1 & 1\\
+\end{bmatrix} 
+x(t)
+\ \ \ 
+$
+\\The transfer function of this system is
+\begin{enumerate}[label=(\Alph*)]
+\item ${(s^2+3s+2)}^{-1}$
+\item ${(s+2)}^{-1}$
+\item $s{(s^2+3s+2)}^{-1}$
+\item ${(s+1)}^{-1}$
+\end{enumerate}
+\begin{solution}
+(D)
+\\ $T(s)=
+\begin{bmatrix}
+1 \\
+1 
+\end{bmatrix}
+{(s\boldsymbol{I}-\boldsymbol{A})^{-1}}
+\begin{bmatrix}
+1 \\
+0 
+\end{bmatrix}\\
+(s\boldsymbol{I}-\boldsymbol{A})^{-1}=
+\begin{bmatrix}
+\frac{1}{s+1} & 0\\
+0 & \frac{1}{s+2}
+\end{bmatrix} 
+\\T(s)=
+\begin{bmatrix}
+1 \\
+1 
+\end{bmatrix}
+\begin{bmatrix}
+\frac{1}{s+1} & 0\\
+0 & \frac{1}{s+2}
+\end{bmatrix}
+\begin{bmatrix}
+1 \\
+0 
+\end{bmatrix}
+=\frac{1}{s+1}
+$
+\end{solution}
+
+
+\question
+A Lag network for compensation normally consists of:
+\begin{enumerate}[label=(\Alph*)]
+\item R, L and C elements
+\item R and L elements
+\item R and C elements
+\item R only
+\end{enumerate}
+\begin{solution}
+(C)
+\end{solution}
+
+\question
+The phase margin of a system with the open loop transfer function:\\
+$\displaystyle G(s)H(s)=\frac{(1-s)}{(1+s)(3+s)}$ is
+\begin{enumerate}[label=(\Alph*)]
+\item $68.3^{\circ}$
+\item $90^{\circ}$
+\item $0^{\circ}$
+\item $\infty$
+\end{enumerate}
+\begin{solution}
+(D)\\
+$|{GH(j\omega)|\neq 1}$, for any value of $\omega$. Thus phase margin is $\infty$
+\end{solution}
+
+\question
+The correct sequence of steps needed to improve system stability is:
+\begin{enumerate}[label=(\Alph*)]
+\item reduce gain, use negative feedback, insert derivative action
+\item reduce gain, insert derivative action, use negative feedback
+\item insert derivative action, use negative feedback, reduce gain
+\item use negative feedback, reduce gain, insert derivative action
+\end{enumerate}
+\begin{solution}
+(D)
+\end{solution}
+
+\question
+A lead compensating network
+\begin{enumerate}[label=(\alph*)]
+\item improves response time
+\item stabilizes the system with low phase margin
+\item enables moderate increase in gain without affecting stability
+\item increases resonant frequency
+\end{enumerate}
+In the above statements, correct are:
+\begin{enumerate}[label=(\Alph*)]
+\item (a) and (b)
+\item (a) and (c)
+\item (a), (c) and (d)
+\item (a), (b), (c) \& (d)
+\end{enumerate}
+\begin{solution}
+(D)
+\end{solution}
+
+\question
+The pole–zero plot given in fig. is that of a:\\
+
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,310); %set diagram left start at 0, and has height of 310
+
+%Straight Lines [id:da21843549461658163] 
+\draw    (365.5,213.17) -- (614.56,214.68) ;
+%Straight Lines [id:da07863626362257592] 
+\draw    (539.64,107.04) -- (538.12,273.81) ;
+%Shape: Ellipse [id:dp339933904313815] 
+\draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (427.84,213.47) .. controls (427.84,209.83) and (430.9,206.88) .. (434.69,206.88) .. controls (438.48,206.88) and (441.54,209.83) .. (441.54,213.47) .. controls (441.54,217.1) and (438.48,220.05) .. (434.69,220.05) .. controls (430.9,220.05) and (427.84,217.1) .. (427.84,213.47) -- cycle ;
+%Shape: Ellipse [id:dp7316271746989322] 
+\draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (451.83,213.47) .. controls (451.83,209.83) and (454.9,206.88) .. (458.68,206.88) .. controls (462.47,206.88) and (465.54,209.83) .. (465.54,213.47) .. controls (465.54,217.1) and (462.47,220.05) .. (458.68,220.05) .. controls (454.9,220.05) and (451.83,217.1) .. (451.83,213.47) -- cycle ;
+%Straight Lines [id:da42256600779120435] 
+\draw    (403.27,210.19) -- (414.13,217.37) ;
+%Straight Lines [id:da39992866607843136] 
+\draw    (404.48,218.06) -- (412.32,208.52) ;
+%Straight Lines [id:da9151605699430307] 
+\draw    (476.96,210.53) -- (487.81,217.92) ;
+%Straight Lines [id:da600067973776121] 
+\draw    (478.17,218.61) -- (486.01,209.07) ;
+
+% Text Node
+\draw (508.16,104.82) node [anchor=north west][inner sep=0.75pt]    {$\mathbf{j\omega }$};
+% Text Node
+\draw (596.92,217.83) node [anchor=north west][inner sep=0.75pt]    {$\mathbf{\sigma }$};
+\end{tikzpicture}
+
+\begin{enumerate}[label=(\Alph*)]
+\item PID controller
+\item PD controller
+\item Integrator
+\item Lag–lead compensating network
+\end{enumerate}
+\begin{solution}
+(D)
+\end{solution}
+
+
+\end{questions}
+\end{document}
